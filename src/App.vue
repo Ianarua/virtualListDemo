@@ -11,7 +11,7 @@
           >
             <div
               :class="['virtual-item', item === 0 ? 'new' : '']"
-              :style="[style, { flexBasis: `calc(100% / ${rowNum} - 16px)` }]"
+              :style="[style, { width: `calc(100% / ${rowNum} - 16px)` }]"
             >
               <template v-if="item === 0">
                 {{ item }}
@@ -34,10 +34,10 @@ import VirtualList from '@/components/VirtualList.vue';
 import { ref } from 'vue';
 
 const listData = ref<number[]>([]);
-for (let i = 0; i < 33; i++) {
+for (let i = 0; i < 35; i++) {
   listData.value.push(i);
 }
-const rowNum = ref(4);
+const rowNum = ref(6);
 </script>
 
 <style scoped>
